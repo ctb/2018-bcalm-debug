@@ -1,0 +1,9 @@
+.snakemake/
+bcalm.out.k31.inputlist.txt
+bcalm.twofoo.k31.inputlist.txt
+out.nonreci.k31.count.txt
+out/
+trashme*
+twofoo.fq.gz
+twofoo.nonreci.k31.count.txt
+twofoo/
