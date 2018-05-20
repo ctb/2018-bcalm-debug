@@ -6,7 +6,7 @@ The issue at hand: [issue 34](https://github.com/GATB/bcalm/issues/34)
 
 ## Anywhere:
 
-Install BCALM, then:
+Install BCALM & make sure `bcalm` is in your PATH, then:
 
 ```
 git clone https://github.com/ctb/2018-bcalm-debug.git
