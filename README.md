@@ -18,7 +18,10 @@ snakemake
 cat out.nonreci.k31.count.txt
 ```
 
-Does the last command output 0, or not?
+Does the last command yield 0, or some nonzero number?
+
+If the latter, this demonstrates the problem that I'm encountering
+in issue 34.
 
 ## On MSU HPC:
 
