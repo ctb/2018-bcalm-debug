@@ -14,7 +14,7 @@ rule count:
     output:
         "{catlas_base}.nonreci.k{ksize}.count.txt"
     shell:
-        "detect_non_reci_edges.py {input} | wc -l > {output}"
+        "./detect_non_reci_edges.py {input} | wc -l > {output}"
 
 # build GFA
 rule gfa:
@@ -23,7 +23,7 @@ rule gfa:
     output:
         "{catlas_base}/bcalm.{catlas_base}.k{ksize}.unitigs.gfa"
     shell:
-        "convertToGFA.py {input} {output} {ksize}"
+        "./convertToGFA.py {input} {output} {ksize}"
         
 
 # build cDBG using bcalm
