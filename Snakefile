@@ -2,10 +2,18 @@ catlas_base = 'out'
 ksize = 31
 input_sequences = expand('{catlas_base}.fq.gz', catlas_base=catlas_base)
 
+# top level build
 rule all:
     input:
         expand("{catlas_base}.nonreci.k{ksize}.count.txt",
                catlas_base=catlas_base, ksize=ksize)
+    shell:
+        "echo RESULT: $(cat {input}) non-reciprocal edges detected\; should be 0"
+
+# clean and rebuild
+rule clean:
+    shell:
+        "rm -fr {catlas_base} bcalm.{catlas_base}.k{ksize}.inputlist.txt {catlas_base}.nonreci.k{ksize}.count.txt"
 
 # count non-reciprocal edges
 rule count:

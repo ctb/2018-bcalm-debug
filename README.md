@@ -14,14 +14,15 @@ git clone https://github.com/ctb/2018-bcalm-debug.git
 cd 2018-bcalm-debug
 
 snakemake
-
-cat out.nonreci.k31.count.txt
 ```
 
-Does the last command yield 0, or some nonzero number?
+Output:
 
-If the latter, this demonstrates the problem that I'm encountering
-in issue 34.
+```
+...
+RESULT: 812 non-reciprocal edges detected; should be 0
+...
+```
 
 ## On MSU HPC:
 
@@ -37,6 +38,4 @@ git clone https://github.com/ctb/2018-bcalm-debug.git
 cd 2018-bcalm-debug
 
 snakemake
-
-cat out.nonreci.k31.count.txt
 ```
